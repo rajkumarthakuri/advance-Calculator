@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+    <title>ST Solution fx-82567 PLUS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-box">
+        <section class="box-one">
+            <article class="box-one-top">
+                <div class="box-one-text">
+                    <img src="logo.png" alt="ST Solutions" aria-label="ST Solutions Logo">
+                    <span style="display: inline-flex; flex-direction: column; line-height: 0.8;">
+                        <span style="font-size: 17px; font-weight: bold; letter-spacing: 2px;"><italic>ST</italic></span>
+                        <span style="font-size: 10px; letter-spacing: 3px; color: rgba(176, 184, 193, 0.85); display: inline-block; margin-left: 18px;">SOLUTIONS</span>
+                    </span>
+                    <div id="shift-indicator" class="shift-led"></div>
+                    <span>fx-82567 PLUS</span>                    
+                </div>
+                <center >
+                    <code>Created by: Rajkumar Thakuri</code>
+                </center> 
+                <div id="box-one-middle">                   
+                    <span id="angle-mode-label" style="font-size:10px; padding:2px 5px; color:green;">DEG</span>
+                     <input type="text" id="result" placeholder="0" readonly>
+                </div>
+                <span id="box-one-bottom">
+                    <button onclick="cuberut()">3<sub>√</sub></button>
+                    <button onclick="fourrut()">4<sub>√</sub></button>
+                    <button onclick="fiverut()">5<sub>√</sub></button>
+                    <button onclick="sqrt()">√</button>
+                </span>
+            </article>
+
+            <div class="box-two">
+            <!--    <span>
+                    <small>x<sup>2</sup></small>
+                    <small>x<sup>3</sup></small>
+                    <small>x<sup>4</sup></small>
+                    <small>x<sup>5</sup></small>
+                    <small>x<sup>6</sup></small>
+                    <small>x<sup>7</sup></small>
+                </span> -->
+                <span>
+                    <button onclick="x2()">x<sup>2</sup></button>
+                    <button onclick="x3()">x<sup>3</sup></button>
+                    <button onclick="x4()">x<sup>4</sup></button>
+                    <button onclick="x5()">x<sup>5</sup></button>
+                    <button onclick="x6()">x<sup>6</sup></button>
+                    <button onclick="x7()">x<sup>7</sup></button>
+                </span>
+              <!--  <span>
+                    <small>x<sup>9</sup></small>
+                    <small>log</small>
+                    <small>ln</small>
+                    <small>e</small>
+                    <small>cot</small>
+                    <small>cotx</small>
+                </span>  -->
+                <span>
+                    <button onclick="x9()">x<sup>9</sup></button>
+                    <button onclick="log()">log</button>
+                    <button onclick="ln()">ln</button>
+                    <button onclick="e()">e</button>
+                    <button onclick="cot()">cot</button>
+                    <button onclick="coth()">coth</button>
+                </span>
+            <!--    <span>
+                    <small>asinh</small>
+                    <small>asin</small>
+                    <small>sinh</small>
+                    <small>sin</small>
+                    <small>cos</small>
+                    <small>cosh</small>
+                </span>  -->
+                <span>
+                    <button onclick="asinh()">asinh</button>
+                    <button onclick="asin()">asin</button>
+                    <button onclick="sinh()">sinh</button>
+                    <button onclick="sin()">sin</button>
+                    <button onclick="cos()">cos</button>
+                    <button onclick="cosh()">cosh</button>
+                </span>
+          <!--      <span>
+                    <small>acos</small>
+                    <small>acosh</small>
+                    <small>tan</small>
+                    <small>tanh</small>
+                    <small>atan</small>
+                    <small>atanh</small>
+                </span> -->
+                <span>
+                    <button onclick="acos()">acos</button>
+                    <button onclick="acosh()">acosh</button>
+                    <button onclick="tan()">tan</button>
+                    <button onclick="tanh()">tanh</button>
+                    <button onclick="atan()">atan</button>
+                    <button onclick="atanh()">atanh</button>
+                </span>
+            </div>
+
+            <div class="box-three">
+                <span>
+                    <small>M</small>
+                    <small>G</small>
+                    <small>T</small> 
+                    <small>&nbsp;</small>                   
+                    <small>OFF</small>
+                </span>
+                <span>
+                    <button onclick="brct('(')">(</button>
+                    <button onclick="brct(')')">)</button>
+                    <button onclick="percentage()">%</button>
+                    <button onclick="toggleShift()" id="shift-btn" style="background-color: #d97706; color: white;">SHIFT</button>
+                    <button onclick="bkspc()">⌫</button>
+                </span>
+                <span>
+                    <small>MAT</small>
+                    <small>VCT</small>
+                    <small>K</small>
+                    <small>nPr</small>
+                    <small>nCr</small>
+                </span>
+                <span>
+                    <button onclick="dis('7')">7</button>
+                    <button onclick="dis('8')">8</button>
+                    <button onclick="dis('9')">9</button>
+                    <button onclick="del()">AC</button>
+                    <button onclick="clearCurrent()">C</button>
+                </span>
+                <span>
+                    <small>S-SUM</small>
+                    <small>S-VAR</small>
+                    <small>DISTR</small>
+                    <small>e=0</small>
+                    <small>a+bi</small>
+                </span>
+                <span>
+                    <button onclick="dis('4')">4</button>
+                    <button onclick="dis('5')">5</button>
+                    <button onclick="dis('6')">6</button>
+                    <button onclick="dis('*')" class="operator-btn">×</button>
+                    <button onclick="dis('/')" class="operator-btn">÷</button>
+                </span>
+                <span>
+                    <small>RND</small>
+                    <small>RAN#</small>
+                    <small>X!</small>
+                    <small>Mode</small>
+                    <small>Re-IM</small>
+                </span>
+                <span>
+                    <button onclick="dis('1')">1</button>
+                    <button onclick="dis('2')">2</button>
+                    <button onclick="dis('3')">3</button>
+                    <button onclick="dis('+')" class="operator-btn">+</button>
+                    <button onclick="dis('-')" class="operator-btn">–</button>
+                </span>
+                <span>
+                    <small>&nbsp;</small>
+                    <small>π</small>
+                    <small>&nbsp;</small>
+                    <small>&nbsp;</small>
+                    <small>&nbsp;</small>
+                </span>
+                <span>
+                    <button onclick="dis('0')">0</button>
+                    <button onclick="dis('.')">.</button>
+                    <button onclick="dis(',')">,</button>
+                    <button onclick="ans()" class="operator-btn">ANS</button>
+                    <button onclick="solve()" class="operator-btn">=</button>
+                </span>
+            </div>       
+        </section>        
+
+        <!-- Instructions Panel -->
+        <aside class="instructions-panel">
+            <h2 class="instr-title">📘 How to Use</h2>
+
+            <!-- MATRIX -->
+            <div class="instr-card">
+                <h3 class="instr-heading">🔢 Matrix</h3>
+                <ol class="instr-list">
+                    <li>Press <kbd>SHIFT</kbd> → then <kbd>7</kbd> (MAT label) to open Matrix modal.</li>
+                    <li>Select <strong>Save As</strong>: MatA or MatB.</li>
+                    <li>Set <strong>Dim</strong> (rows × cols): 2×2 or 3×3.</li>
+                    <li>Click <strong>Grid</strong> to generate input cells.</li>
+                    <li>Fill in values using keyboard or arrow keys.</li>
+                    <li>Click <strong>Save Object</strong> — MatA or MatB appears on display.</li>
+                    <li>Use <kbd>+</kbd> <kbd>−</kbd> <kbd>×</kbd> between MatA and MatB.</li>
+                    <li>Repeat for second matrix (MatB).</li>
+                    <li>Press <kbd>=</kbd> to calculate.</li>
+                </ol>
+                <div class="instr-example">
+                    <span class="eg-label">Example:</span>
+                    <code>MatA + MatB =</code>
+                    <code>MatA * MatB =</code>
+                </div>
+                <div class="instr-note">⚠️ For addition/subtraction, both matrices must have same dimensions. For multiplication, cols of MatA must equal rows of MatB.</div>
+            </div>
+
+            <!-- VECTOR -->
+            <div class="instr-card">
+                <h3 class="instr-heading">➡️ Vector</h3>
+                <ol class="instr-list">
+                    <li>Press <kbd>SHIFT</kbd> → then <kbd>8</kbd> (VCT label) to open Vector modal.</li>
+                    <li>Select <strong>Save As</strong>: VctA or VctB.</li>
+                    <li>Choose <strong>Dimensions</strong>: 2D (X,Y) or 3D (X,Y,Z).</li>
+                    <li>Click <strong>Grid</strong> to generate input fields.</li>
+                    <li>Fill in X, Y (and Z for 3D) values.</li>
+                    <li>Click <strong>Save Object</strong> — VctA or VctB appears on display.</li>
+                    <li>Use <kbd>+</kbd> <kbd>−</kbd> for vector addition/subtraction.</li>
+                    <li>Use <kbd>×</kbd> for dot product.</li>
+                    <li>Repeat for second vector (VctB).</li>
+                    <li>Press <kbd>=</kbd> to calculate.</li>
+                </ol>
+                <div class="instr-example">
+                    <span class="eg-label">Example:</span>
+                    <code>VctA + VctB =</code>
+                    <code>VctA * VctB =</code>
+                </div>
+                <div class="instr-note">⚠️ Both vectors must have the same number of dimensions for operations.</div>
+            </div>
+
+            <!-- STATS -->
+            <div class="instr-card">
+                <h3 class="instr-heading">📊 Statistics</h3>
+                <ol class="instr-list">
+                    <li>Type your data values separated by commas on the display.</li>
+                    <li>Example: <code>2,4,6,8,10</code></li>
+                    <li>Press <kbd>SHIFT</kbd> to activate SHIFT mode.</li>
+                    <li>Press <kbd>4</kbd> for <strong>S-SUM</strong> functions.</li>
+                    <li>Press <kbd>5</kbd> for <strong>S-VAR</strong> functions.</li>
+                    <li>Result shows <strong>instantly</strong> — no need to press <kbd>=</kbd>.</li>
+                </ol>
+                <div class="instr-example">
+                    <span class="eg-label">S-SUM functions (SHIFT → 4):</span>
+                    <code>Σx &nbsp;— Sum of all values</code>
+                    <code>Σx² — Sum of squares</code>
+                    <code>n &nbsp;&nbsp;— Count of values</code>
+                </div>
+                <div class="instr-example" style="margin-top: 8px;">
+                    <span class="eg-label">S-VAR functions (SHIFT → 5):</span>
+                    <code>x̄ &nbsp;&nbsp;— Mean (average)</code>
+                    <code>σx &nbsp;— Population std dev</code>
+                    <code>sx &nbsp;— Sample std dev</code>
+                    <code>minX / maxX</code>
+                </div>
+                <div class="instr-note">⚠️ Enter at least 2 comma-separated values on display before pressing SHIFT → S-SUM or S-VAR.</div>
+            </div>
+            <!-- DISTRIBUTION -->
+            <div class="instr-card">
+                <h3 class="instr-heading">📈 Distribution</h3>
+                <ol class="instr-list">
+                    <li>Press <kbd>SHIFT</kbd> → then <kbd>6</kbd> (DISTR) to open Distribution modal.</li>
+                    <li>Choose <strong>Standard Normal (Z)</strong> or <strong>General Normal (X, μ, σ)</strong>.</li>
+                    <li>Enter the required value(s).</li>
+                    <li>Click <strong>Solve PD</strong> for Probability Density.</li>
+                    <li>Click <strong>Solve CDF</strong> for Cumulative Distribution.</li>
+                </ol>
+                <div class="instr-example">
+                    <span class="eg-label">PD:</span>
+                    <code>f(z) = (1/√2π) × e^(−z²/2)</code>
+                </div>
+                <div class="instr-example" style="margin-top:8px">
+                    <span class="eg-label">CDF:</span>
+                    <code>P(Z ≤ z) — area under curve</code>
+                </div>
+            </div>
+            <!-- nPr and nCr -->
+            <div class="instr-card">
+                <h3 class="instr-heading">🔣 Permutation & Combination</h3>
+                <ol class="instr-list">
+                    <li>Enter the value of <strong>n</strong> on the display.</li>
+                    <li>Press <kbd>SHIFT</kbd> to activate SHIFT mode.</li>
+                    <li>Press <kbd>AC</kbd> for <strong>nPr</strong> (Permutation).</li>
+                    <li>Press <kbd>C</kbd> for <strong>nCr</strong> (Combination).</li>
+                    <li>Enter the value of <strong>r</strong>.</li>
+                    <li>Press <kbd>=</kbd> to calculate the result.</li>
+                </ol>
+                <div class="instr-example">
+                    <span class="eg-label">Example (nPr):</span>
+                    <code>5 → SHIFT → AC → 3 → = </code>
+                    <code>Result: 60 &nbsp;(5P3 = 60)</code>
+                </div>
+                <div class="instr-example" style="margin-top: 8px;">
+                    <span class="eg-label">Example (nCr):</span>
+                    <code>5 → SHIFT → C → 3 → =</code>
+                    <code>Result: 10 &nbsp;(5C3 = 10)</code>
+                </div>
+                <div class="instr-note">⚠️ n and r must be non-negative integers, and r must be less than or equal to n.</div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- MATRIX MODAL POPUP CONTAINER -->
+		<div id="matrix-modal" class="modal-overlay">
+			<div class="modal-content">
+				<h3>Matrix Grid Settings</h3>
+				
+			   <!-- UPDATE THIS SPECIFIC ROW INSIDE YOUR MATRIX MODAL CONTENT -->
+		<div class="modal-row">
+			<label for="matrix-target">Save As:</label>
+			<select id="matrix-target">
+				<option value="A" selected>MatA</option>
+				<option value="B">MatB</option>
+			</select>
+
+			<label for="matrix-rows">Dim:</label>
+			<select id="matrix-rows">
+				<option value="2">2</option>
+				<option value="3" selected>3</option>
+			</select>
+			<span>×</span>
+			<select id="matrix-cols" aria-label="Number of Columns">
+				<option value="2">2</option>
+				<option value="3" selected>3</option>
+			</select>
+			<button onclick="generateMatrixGrid()" class="modal-action-btn">Grid</button>
+		</div>
+
+
+        <!-- Dynamic grid input container generated by JavaScript -->
+        <div id="matrix-dynamic-grid" class="matrix-input-grid"></div>
+
+        <div class="modal-footer">
+            <button onclick="saveMatrixData()" class="modal-save-btn">Save Object</button>
+            <button onclick="closeMatrixModal()" class="modal-cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+<!-- VECTOR MODAL POPUP CONTAINER -->
+<div id="vector-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>Vector Settings</h3>
+        
+        <div class="modal-row">
+            <label for="vector-target">Save As:</label>
+            <select id="vector-target">
+                <option value="A" selected>VctA</option>
+                <option value="B">VctB</option>
+            </select>
+
+            <label for="vector-size">Dimensions:</label>
+            <select id="vector-size">
+                <option value="2">2D (X, Y)</option>
+                <option value="3" selected>3D (X, Y, Z)</option>
+            </select>
+            <button onclick="generateVectorGrid()" class="modal-action-btn">Grid</button>
+        </div>
+
+        <!-- Dynamic vector element inputs -->
+        <div id="vector-dynamic-grid" class="matrix-input-grid"></div>
+
+        <div class="modal-footer">
+            <button onclick="saveVectorData()" class="modal-save-btn">Save Object</button>
+            <button onclick="closeVectorModal()" class="modal-cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+<!-- DISTRIBUTION MODAL POPUP CONTAINER -->
+<div id="distr-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>Normal Distribution</h3>
+        
+        <div class="modal-row">
+            <label for="distr-type">Type:</label>
+            <select id="distr-type" onchange="toggleDistrInputs()">
+                <option value="Standard" selected>Standard Normal (Z)</option>
+                <option value="General">General Normal (X, μ, σ)</option>
+            </select>
+        </div>
+
+        <!-- Dynamic value fields -->
+        <div class="modal-row">
+            <label id="lbl-primary">Value (Z):</label>
+            <input type="number" id="distr-val" class="matrix-cell" style="width: 100px;" value="0" step="any" aria-label="Distribution Value">
+        </div>
+
+        <div id="general-inputs" style="display: none;">
+            <div class="modal-row">
+                <label>Mean (μ):</label>
+                <input type="number" id="distr-mean" class="matrix-cell" style="width: 100px;" value="0" step="any" aria-label="Mean">
+            </div>
+            <div class="modal-row">
+                <label>Std Dev (σ):</label>
+                <input type="number" id="distr-sd" class="matrix-cell" style="width: 100px;" value="1" step="any">
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button onclick="calculateDistribution('PD')" class="modal-save-btn" style="background-color: rgb(75, 133, 5);">Solve PD</button>
+            <button onclick="calculateDistribution('CDF')" class="modal-save-btn">Solve CDF</button>
+            <button onclick="closeDistrModal()" class="modal-cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
